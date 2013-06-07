@@ -1,0 +1,18 @@
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-06-07 15:06:20
+project --topLevelPackage org.genbu --projectName genbu --java 6 --packaging WAR
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-06-07 15:06:35
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-06-07 15:06:59
+hint
+persistence setup --database MYSQL --provider HIBERNATE --databaseName hoge --hostName 127.0.0.1 --userName user --password password
+hint
+entity jpa --class org.genbu.model.Person
+field string name
+field number --type int --fieldName age
+web mvc setup 
+web mvc all --package org.genbu.controller
+entity jpa --class ~.model.Company --testAutomatically 
+field string name
+field string address
+web mvc all --package org.genbu.controller
+persistence setup --database HYPERSONIC_IN_MEMORY --provider HIBERNATE 
+persistence setup --database MYSQL --provider HIBERNATE --databaseName database --hostName 127.0.0.1:3306 --userName user --password password
